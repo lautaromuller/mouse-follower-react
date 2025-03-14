@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export function FollowMouse() {
     const [enabled, setEnabled] = useState(false)
-    const [position, setPosition] = useState({ x: -30, y: -30 })
+    const [position, setPosition] = useState({ x: -20, y: -20 })
 
     useEffect(() => {
       const handleMove = (event) => {
@@ -32,15 +32,15 @@ export function FollowMouse() {
         <div style={{
           position: 'absolute',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          border: '1px solid #fff',
+          border: '2px solid #fff',
           borderRadius: '50%',
           opacity: 0.8,
           pointerEvents: 'none',
-          left: -25,
-          top: -25,
-          width: 35,
-          height: 35,
-          transform: `translate(${position.x}px, ${position.y}px)`
+          left: -15,
+          top: -15,
+          width: 30,
+          height: 30,
+          transform: `translate(${position.x}px, ${position.y}px)`,
         }}
         />
         <button onClick={() => setEnabled(!enabled)}>
